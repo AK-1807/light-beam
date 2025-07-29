@@ -1,5 +1,5 @@
 
-export const  revalidate = 30; 
+export const  revalidate = 10; 
 
 import { GraphQLClient } from 'graphql-request';
 import { GET_POSTS } from '../lib/queries';
