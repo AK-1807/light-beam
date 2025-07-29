@@ -1,5 +1,5 @@
 
-export const  revalidate = 10; 
+export const dynamic = 'force-dynamic'; 
 
 import { GraphQLClient } from 'graphql-request';
 import { GET_POSTS } from '../lib/queries';
