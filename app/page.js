@@ -9,8 +9,8 @@ const graphQLClient = new GraphQLClient('https://dev-light-beam.pantheonsite.io/
 
 export default async function Home() {
   const data = await graphQLClient.request(GET_POSTS);
-  const sections = data?.pageBy?.pageBuilderSections?.sections;
-
+  const sections = data?.pageBy;
+  
   return (
     <>
       <PageBuilder blades={sections} />

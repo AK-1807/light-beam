@@ -1,15 +1,14 @@
 import Image from 'next/image'
 import React from 'react'
-import Button from "./common/Buttons"
+import Button from "../common/Buttons"
 
 export default function HeroBanner({banner}) {
 
-    console.log(banner)
   return (
     <section className='heroBanner flex items-end min-h-[875px] md:min-h-[981px] lg:min-h-[580px] xl:min-h-[704px] 2xl:min-h-[881px] 3xl:min-h-[1321px]  after:absolute after:top-0 after:left-0 after:w-full after:h-full after:opacity-30 after:bg-silver after:z-0 w-3xl:pt-[240px] 3xl:pt-[340px]'>
         {banner.bgImage && (
              <div className="bgImage absolute right-0 bottom-0 max-w-[720px] max-h-[867px] w-full h-full z-1 3xl:max-w-[1087px] 3xl:bottom-auto 3xl:top-0 3xl:max-h-[1350px] ">
-            <Image src="/homepage/banner2.png" className="h-full object-right-top" alt="banner" width={800} height={800}/>
+            <Image src="/homepage/banner2.png" className="h-full object-right-top" alt="banner" width={800} height={800} priority/>
         </div>
         )}
         <div className="container">
