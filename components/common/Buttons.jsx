@@ -8,8 +8,8 @@ export default function Button({data}) {
         "btn-blue": "btn btn-blue",
     }
   return (
-    <Link href={data.linkUrl || "#"} className={`${btnClass?.[data.buttonStyle[0]] }`}>
-            {data.text}
-    </Link>
+    <Link href={data?.link_url || "#"} className={`${btnClass?.[data?.button_style] }`}>
+            {data?.text}
+    </Link> 
   )
 }

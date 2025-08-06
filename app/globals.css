@@ -105,10 +105,10 @@
   .pd-medium{
     @apply py-[32px] md:py-[42px] 2xl:py-[56px] 3xl:py-[95px];
   }
-  .pd-medium-top{
+  .pd-medium-top,.md-padding-top{
     @apply pt-[32px] md:pt-[42px] 2xl:pt-[56px] 3xl:pt-[95px];
   }
-  .pd-medium-bottom{
+  .pd-medium-bottom,.md-padding-bottom{
     @apply pb-[32px] md:pb-[42px] 2xl:pb-[56px] 3xl:pb-[95px];
   }
   .pd-md-bottom{
@@ -122,6 +122,12 @@
   }
   .pd-small-bottom{
     @apply 2xl:pb-[32px] pb-[32px];
+  }
+  .pb-0{
+    @apply pb-0;
+  }
+  .pt-0{
+    @apply pt-0;
   }
 
   .btn{

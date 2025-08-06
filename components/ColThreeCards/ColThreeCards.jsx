@@ -1,8 +1,8 @@
 import React from 'react'
 
 export default function ColThreeCards({colThreeCards}) {
-   
-    let padding = colThreeCards?.paddingClasses.join(" ")
+//    console.log(colThreeCards)
+    let padding = colThreeCards?.padding_classes.join(" ")
   return (
     <section className={`col-three-cards relative ${padding}`}>
       <div className="container">
@@ -15,14 +15,14 @@ export default function ColThreeCards({colThreeCards}) {
                             className="relative h-full px-[48px] py-[32px] lg:px-[20px] lg:py-[23px] xl:px-[22px] xl:py-[30px] 2xl:px-[22px] 2xl:pt-[26px] 2xl:pb-[20px] 3xl:pl-[42px] 3xl:pr-[41px] 3xl:pt-[36px] 3xl:pb-[22px]">
                         
                                 <div className="bg-blue rounded-[50%] z-0 mb-[29px] lg:mb-[55px] xl:mb-[61px] 2xl:mb-[81px] w-[70px] h-[70px] lg:w-[45px] lg:h-[45px] xl:w-[55px] xl:h-[55px] 2xl:w-[70px] 2xl:h-[70px] 3xl:w-[113px] 3xl:h-[113px] 3xl:mb-[140px]">
-                                    <img src={`https://dev-light-beam.pantheonsite.io${card?.image?.node.filePath}`} alt={card.title}
-                                        className="w-full h-full" width={70} height={70} />
+                                    <img src={`${card?.image?.url}`} alt={card?.title}
+                                         className="w-full h-full" width={70} height={70} />
                                 </div>
                             
 
                             <div className="contentWrap">
-                            <h3>{card.title}</h3> 
-                            <p className="pt-[12px] lg:pt-[11px] 3xl:pt-[14px]"> { card.blurb}</p> 
+                            <h3>{card?.title}</h3> 
+                            <p className="pt-[12px] lg:pt-[11px] 3xl:pt-[14px]"> { card?.blurb}</p> 
                             </div>
                         </div>
                     </div>
