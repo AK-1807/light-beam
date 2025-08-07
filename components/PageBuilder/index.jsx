@@ -6,8 +6,13 @@ import ColThreeCards from '../ColThreeCards/ColThreeCards';
 
 export default function index({blades}) {
     // let sections = blades.pageBuilderSections?.sections
-    let sections = blades?.Sections
-    let bladeList = pageBuilder(sections)
+    // let sections = blades?.Sections
+    // let bladeList = pageBuilder(sections)
+
+	let sections = blades.pageBuilderSections?.sections
+	console.log(blades)
+    let bladeList = pageBuilder(blades)
+
   return (
     <>
         
@@ -22,20 +27,37 @@ export default function index({blades}) {
   )
 }
 
-function pageBuilder(data) {
+
+function pageBuilder(data, pageID) {
 	let blades = [];
 	data?.map((blade, index) => {
-		if (blade.acf_fc_layout === 'hero_banner') {
+		if (blade.fieldGroupName.replace('PageBuilderSectionsSections', '') === 'HeroBannerLayout') {
 			blades.push(<HeroBanner banner={blade}/>);
-		} else if (blade.acf_fc_layout === 'intro') {
+		} else if (blade.fieldGroupName.replace('PageBuilderSectionsSections', '') === 'IntroLayout') {
+			// let 	
 			blades.push(<Intro intro={blade} indx={index}/>);
-		}else if (blade.acf_fc_layout === 'col_three_cards') {
+		}else if (blade.fieldGroupName.replace('PageBuilderSectionsSections', '') === 'ColThreeCardsLayout') {
 			blades.push(<ColThreeCards colThreeCards={blade}/>);
 		}
 	});
 
 	return blades;
 }
+
+// function pageBuilder(data) {
+// 	let blades = [];
+// 	data?.map((blade, index) => {
+// 		if (blade.acf_fc_layout === 'hero_banner') {
+// 			blades.push(<HeroBanner banner={blade}/>);
+// 		} else if (blade.acf_fc_layout === 'intro') {
+// 			blades.push(<Intro intro={blade} indx={index}/>);
+// 		}else if (blade.acf_fc_layout === 'col_three_cards') {
+// 			blades.push(<ColThreeCards colThreeCards={blade}/>);
+// 		}
+// 	});
+
+// 	return blades;
+// }
 
 // function pageBuilder(data, pageID) {
 // 	let blades = [];

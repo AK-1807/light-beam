@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Intro({intro}) {
     console.log(intro)
-    let padding = intro?.padding_classes.join(" ")
+    let padding = intro?.paddingClasses.join(" ") 
   return (
     <section className={`intro relative ${padding}`}>
         <div className="container">
@@ -11,7 +11,7 @@ export default function Intro({intro}) {
                     {intro.eyebrow && (<span className="eyebrow">{intro?.eyebrow}</span>)}
                     
                        <h2 className="pt-[6px] md:pt-[9px] lg:pt-[9px] xl:pt-[8px] 2xl:pt-[12px] 3xl:pt-[17px]">
-                        {intro?.title}
+                        {intro?.title || intro?.titile}
                         </h2>
                         {intro.blurb && (<p className="text-darkGray pt-[20px] lg:pt-[24px] 2xl:pt-[32px] 3xl:pt-[48px] pr-[20px]">
                             {intro.blurb}
