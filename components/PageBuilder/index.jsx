@@ -13,7 +13,7 @@ export default function index({blades}) {
     // let bladeList = pageBuilder(sections)
 
 	let sections = blades.pageBuilderSections?.sections
-	console.log(blades)
+	// console.log(blades)
     let bladeList = pageBuilder(blades)
 
   return (
@@ -46,6 +46,8 @@ function pageBuilder(data, pageID) {
 			blades.push(<IconWithContentCards imgWithContentCards={blade}/>);
 		} else if (blade?.fieldGroupName?.replace('PageBuilderSectionsSections', '') === 'IconWithLinkCardsLayout') {
 			blades.push(<IconWithLinkCards iconWithLinkCards={blade}/>);
+		} else if (blade?.fieldGroupName?.replace('PageBuilderSectionsSections', '') === 'CardGridLayout') {
+			blades.push(<CardGrid cardGrid={blade}/>);
 		}
 	});
 

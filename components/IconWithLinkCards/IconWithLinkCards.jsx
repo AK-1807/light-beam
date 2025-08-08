@@ -3,12 +3,12 @@ import Link from 'next/link'
 import React from 'react'
 
 export default function IconWithLinkCards({iconWithLinkCards}) {
-    console.log(iconWithLinkCards)
+    // console.log(iconWithLinkCards)
      let padding = iconWithLinkCards?.paddingClasses.join(" ") 
      let bg = iconWithLinkCards.backgroundColor[0]
   return (
     <section className={`icon-with-link-cards relative ${padding} ${bg == 'bg-silver' && 'pb-[260px]'} backgroundCurveSecond`}>
-       {bg == 'bg-silver' && (<span class="bg-silver">.</span> )} 
+       {bg == 'bg-silver' && (<span className="bg-silver">.</span> )} 
       <div className="container">   
        
 
