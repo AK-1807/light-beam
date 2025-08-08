@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function Intro({intro}) {
-    console.log(intro)
+    // console.log(intro)
     let padding = intro?.paddingClasses.join(" ") 
   return (
     <section className={`intro relative ${padding}`}>

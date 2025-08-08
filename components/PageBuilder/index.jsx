@@ -3,6 +3,9 @@ import HeroBanner from '../HeroBanner/HeroBanner';
 import Intro from '../Intro/Intro';
 import CardGrid from '../CardGrid/CardGrid';
 import ColThreeCards from '../ColThreeCards/ColThreeCards';
+import ImageWithConntent from '../ImageWithContent/ImageWithContent';
+import IconWithContentCards from '../IconWithContentCards/IconWithContentCards';
+import IconWithLinkCards from '../IconWithLinkCards/IconWithLinkCards';
 
 export default function index({blades}) {
     // let sections = blades.pageBuilderSections?.sections
@@ -31,13 +34,18 @@ export default function index({blades}) {
 function pageBuilder(data, pageID) {
 	let blades = [];
 	data?.map((blade, index) => {
-		if (blade.fieldGroupName.replace('PageBuilderSectionsSections', '') === 'HeroBannerLayout') {
+		if (blade?.fieldGroupName?.replace('PageBuilderSectionsSections', '') === 'HeroBannerLayout') {
 			blades.push(<HeroBanner banner={blade}/>);
-		} else if (blade.fieldGroupName.replace('PageBuilderSectionsSections', '') === 'IntroLayout') {
-			// let 	
+		} else if (blade?.fieldGroupName?.replace('PageBuilderSectionsSections', '') === 'IntroLayout') {
 			blades.push(<Intro intro={blade} indx={index}/>);
-		}else if (blade.fieldGroupName.replace('PageBuilderSectionsSections', '') === 'ColThreeCardsLayout') {
+		} else if (blade?.fieldGroupName?.replace('PageBuilderSectionsSections', '') === 'ColThreeCardsLayout') {
 			blades.push(<ColThreeCards colThreeCards={blade}/>);
+		} else if (blade?.fieldGroupName?.replace('PageBuilderSectionsSections', '') === 'ImageWithTextLayout') {
+			blades.push(<ImageWithConntent imgWithContent={blade}/>);
+		} else if (blade?.fieldGroupName?.replace('PageBuilderSectionsSections', '') === 'IconWithContentCardLayout') {
+			blades.push(<IconWithContentCards imgWithContentCards={blade}/>);
+		} else if (blade?.fieldGroupName?.replace('PageBuilderSectionsSections', '') === 'IconWithLinkCardsLayout') {
+			blades.push(<IconWithLinkCards iconWithLinkCards={blade}/>);
 		}
 	});
 
