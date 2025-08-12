@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '../common/Buttons'
 
 export default function Intro({intro}) {
     console.log(intro)
@@ -19,8 +20,15 @@ export default function Intro({intro}) {
                             {intro.blurb}
                     </p>)}         
                 </div>
-
+                
                 <div className="btn-wrap pt-[38px] w-full lg:w-auto lg:pt-[30px] 2xl:pt-[36px] 3xl:pt-[52px]">
+                    {
+                        intro.buttons &&  (intro?.buttons).map((btn,i)=>(
+                            <React.Fragment key={i}>
+                                <Button data={btn}/>
+                            </React.Fragment>
+                        ))
+                    }
                 </div>
             </div>
         </div>
