@@ -1,10 +1,12 @@
 import React from 'react'
 
 export default function Intro({intro}) {
-    // console.log(intro)
+    console.log(intro)
     let padding = intro?.paddingClasses.join(" ") 
+
+    let bgColor = intro?.backgroundColor[0]
   return (
-    <section className={`intro relative ${padding}`}>
+    <section className={`intro relative ${padding} ${bgColor}`}>
         <div className="container">
             <div className="wrap flex flex-wrap justify-between">
                 <div className="heading-wrap max-w-[86%] md:max-w-[75%] lg:max-w-[60%] 3xl:max-w-[75%]">

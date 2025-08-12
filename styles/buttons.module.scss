@@ -1,4 +1,4 @@
-@import "variables.module.scss";
+@import "./variables.module.scss";
 
 // ---- Buttons ---- //
 .btn {
@@ -12,7 +12,7 @@
   font-size: 10px;
   text-transform: uppercase;
   border-radius: 3px;
-  font-weight: bold;
+  font-weight: bold;  
   transition: all 0.3s;
     @media (min-width: 640px) {
       font-size: 10px;
@@ -79,7 +79,7 @@
 .btn-red::after {
   background-image: url("/homepage/white_right_arrow.svg");
 }
-.btn_blue {
+.btn_blue, .btn-blue {
   background: $thinblue;
   color: $darkGray;
 

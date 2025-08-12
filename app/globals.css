@@ -251,3 +251,27 @@ section.backgroundCurveSecond > span{
 .icon:hover rect {
     fill: red;
 }
+
+
+.tab-with-img .tab-nav li span::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  width: 0;
+  bottom: 1px;
+  height: 1px;
+  background-color: var(--color-red);
+  transition: all 0.3s ease-in-out;
+}
+
+.tab-with-img li span:hover::after {
+  width: calc(100% - 16px);
+}
+
+.tab-with-img li span.active {
+  color: var(--color-red);
+}
+
+.tab-with-img li span.active::after {
+  width: calc(100% - 16px);
+}

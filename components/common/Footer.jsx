@@ -139,7 +139,7 @@ export default function Footer() {
                             className="inline-block absolute top-1/2 left-0 w-full h-[1px] translate-y-[-50%] bg-silver text-[0] z-0">.</span>
                     </div>
                     <form className="relative max-w-[490px] md:max-w-[381px] xl:max-w-[466px] 2xl:max-w-[572px] 3xl:max-w-[930px] w-full">
-                        <label for="email" className="w-0 h-0 text-[0px] absolute">.</label>
+                        <label htmlFor="email" className="w-0 h-0 text-[0px] absolute">.</label>
                         <input type="email" placeholder="ENTER EMAIL ADDRESS" id="email"
                             className="3xl:pr-[255px] pr-[130px] md:pr-[103px] xl:pr-[125px] 2xl:pr-[150px] focus:outline-none"
                             required />
