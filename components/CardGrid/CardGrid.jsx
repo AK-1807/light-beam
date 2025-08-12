@@ -5,6 +5,7 @@ import React from "react";
 export default function CardGrid({cardGrid}) {
     console.log(cardGrid)
     let bigCard = cardGrid?.bigCardDetails
+    // let smlCards = 
   return (
     <section className="card-grid">
       <div className="container">
@@ -13,9 +14,9 @@ export default function CardGrid({cardGrid}) {
             data-aos="fade-up"
             className="w-full group relative overflow-hidden lg:flex-wrap flex flex-col lg:flex-row mb-[30px] md:mb-[16px] lg:mb-[24px] 3xl:mb-[35px]"
           >
-            {/* <Link href="<?php echo $link; ?>" className="emptylink z-[2]">
+            <Link href="<?php echo $link; ?>" className="emptylink z-[2]">
               .
-            </Link> */}
+            </Link>
 
             <div className="w-full lg:max-w-[386px] xl:max-w-[466px] 2xl:max-w-[573px] 3xl:max-w-[736px] flex items-center justify-center lg:min-h-[254px] xl:min-h-[301px] 2xl:min-h-[334px] 3xl:min-h-[725px] lg:h-auto h-[254px] rounded-t-[5px] lg:rounded-r-none lg:rounded-l-[16px] overflow-hidden">
               <Image
@@ -53,11 +54,14 @@ export default function CardGrid({cardGrid}) {
           </div>
 
           <div className="flex  flex-row flex-wrap lg:flex-nowrap lg:gap-[24px]">
+            {
+
+            }
             <div
               data-aos="fade-right"
               className="w-full mb-[30px] md:mb-[16px] lg:mb-0 2xl:max-h-[308px] 3xl:max-h-[609px] 3xl:min-h-[609px] lg:max-h-[233px] lg:min-h-[233px] 2xl:min-h-[308px] 3xl:pl-[24px] md:min-h-[233px] sm:min-h-[233px] min-auto xl:max-h-[245px] xl:min-h-[245px] relative lg:w-[50%] sm:w-full border-[1.5px] lg:border-2 border-red hover:border-red sm:border-silver bg-white rounded-[5px] lg:pr-[80px] 2xl:pr-[70px] 2xl:pt-[30px] p-[31px] pb-[15px] md:pl-[64px] 2xl:pl-[30px] 3xl:pt-[56px] 3xl:pb-[35px] 2xl:pb-[36px] xl:py-[29px] xl:pl-[23px] xl:pr-[110px] md:pr-[91px] lg:p-[18px] flex flex-col justify-start hover:justify-start sm:justify-start lg:justify-between group transition-all duration-300 ease-in-out"
             >
-              <Link href="<?php echo $small_card_link; ?>" className="emptylink z-[2]">
+              <Link href="" className="emptylink z-[2]">
                 .
               </Link>
 
@@ -71,7 +75,7 @@ export default function CardGrid({cardGrid}) {
                 </div>
                 <div className="link-wrap lg:mt-[9px] xl:mt-[17px] 2xl:mt-[26px] 3xl:mt-[14px] group-hover:mt-0 md:mt-0 sm:mt-0 mt-0 transition-all duration-300 ease-in-out">
                   <Link
-                    href="<?php echo $small_card_link; ?>"
+                    href=""
                     className="arrow-btn arrow-btn-black lg:after:opacity-0 opacity-100 group-hover:after:opacity-100"
                   ></Link>
                 </div>
